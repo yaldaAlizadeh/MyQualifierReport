@@ -1,0 +1,446 @@
+%\textsc{\char39} is apasteroph
+% This is "sig-alternate.tex" V2.0 May 2012
+% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
+%
+% This example file demonstrates the use of the 'sig-alternate.cls'
+% V2.5 LaTeX2e document class file. It is for those submitting
+% articles to ACM Conference Proceedings WHO DO NOT WISH TO
+% * <yalda.fazlalizadeh62@gmail.com> 2017-12-01T06:52:51.347Z:
+%
+% ^.
+% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.
+% The 'sig-alternate.cls' file will produce a similar-looking,
+% albeit, 'tighter' paper resulting in, invariably, fewer pages.
+%
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V2.5) produces:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) NO page numbers
+%
+% as against the acm_proc_article-sp.cls file which
+% DOES NOT produce 1) thru' 3) above.
+%
+% Using 'sig-alternate.cls' you have control, however, from within
+% the source .tex file, over both the CopyrightYear
+% (defaulted to 200X) and the ACM Copyright Data
+% (defaulted to X-XXXXX-XX-X/XX/XX).
+% e.g.
+% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
+%
+% ---------------------------------------------------------------------------------------------------------------
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and 
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions _only_ to
+% Gerald Murray (murray@hq.acm.org)
+% ===============================================================
+%
+% For tracking purposes - this is V2.0 - May 2012
+
+\documentclass{sig-alternate}
+\usepackage{comment}
+\usepackage{multirow}
+\usepackage{bbding}
+\usepackage{wrapfig}
+\usepackage{placeins}
+\usepackage{graphicx}
+
+\begin{document}
+%
+% --- Author Metadata here ---
+\conferenceinfo{SOSP}{'97 El Paso, Texas USA}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+%previous title: Test Case Prioritization Based on Software Quality Metrics Incorporating Code Paradigm Data
+\title{Leverage Expedient Software Quality Metrics in White Box Test Case Prioritization\titlenote{(Produces the permission block, and
+copyright information). For use with
+SIG-ALTERNATE.CLS. Supported by ACM.}}
+%\subtitle{[Extended Abstract]
+%\titlenote{A full version of this paper is available as
+%\textit{Author's Guide to Preparing ACM SIG Proceedings Using
+%\LaTeX$2_\epsilon$\ and BibTeX} at
+%\texttt{www.acm.org/eaddress.htm}}}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{2} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Yalda Fazlalizadeh\titlenote{Computer Science PhD student.}\\
+	   \affaddr{Louisiana State University}\\
+       \affaddr{Baton Rouge, LA, USA}\\
+       \email{\textnormal{yfazla1@lsu.edu}}
+% 2nd. author
+\alignauthor
+Anas Mahmoud\titlenote{Assistant Professor in Computer Science Department, Louisiana State University.}\\
+       \affaddr{Louisiana State University}\\
+       \affaddr{Baton Rouge, LA, USA}\\
+      \email{\textnormal{amahmo4@lsu.edu}}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
+%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
+%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
+\date{30 July 1999}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle
+\begin{abstract}
+Regression testing is a test runs after each change or modification to ensure that existing functionality of software has not regressed. Among various techniques introduced to alleviate the problem of heavy costs of frequent runs, test case prioritization schedule execution of test cases to maximize some performance goal. Today, the importance of adapting software requirements as test case prioritization criteria is well-understood. There are some research studies consider software quality metrics (SQM) as quality assurance requirements to be met while prioritizing tests. However, they failed to consider higher priority to fulfill those quality metrics that deem more effective with respect to structure type of program. In this paper, we conducted empirical studies using six open-source programs with different versions for each to investigate this effect. Furthermore, the data collected from recorded behavior of software during previous executions of test cases inspired us to use it as a source to perform better in future. To our knowledge, this study is the first one on the impact of machine learning on test case prioritization. The results show a decrease in computation time for test prioritization while demonstrate an increase in overall performance of applied prioritization technique within several executions of regression testing. 
+\end{abstract}
+
+\begin{comment}
+After each change or modification in software code a test phase is required to ensure that the existing functionality of software has not regressed. This test is called regression testing. There are various techniques of regression testing: Retest-All, Regression Test Selection, Test Case Prioritization (TCP). Test case prioritization techniques are used to improve the cost-effectiveness of regression testing. The goal is to schedule execution of test cases such a way that those test cases with higher probability to outperform others in software fault detection run earlier. With many ideas in the literature to prioritize test cases, adapting requirement specification information is well understood. The existing test prioritization techniques using software quality metric (SQM) as a user requirement. However, the effect for prioritizing test cases based on different SQM deem uniform. In this paper, we empirically explore the impact of prioritizing test cases based on SQMs accordant to each program structure in terms of the effectiveness in faster revealing faults. Furthermore, to our knowledge, this study is the first empirical study on the impact of the machine learning on test case prioritize with the aim of reducing the computation time for test case executions within several executions of regression testing.
+\end{comment}
+
+\keywords{Test case prioritization, Software Regression Testing, Require- ments-Based Test Case Prioritization, Software Quality Metrics, Software Quality Assurance}
+
+\section{Introduction}
+One of most important quality assurance measures during software maintenance is regression testing. 
+%The word regress means to return to an already existing previous state; so, regression testing is a kind of testing to ensure that a program has not regressed. 
+More specifically, the quality assurance team needs to conduct regression testing repeatedly after releasing each new version of the software to confirm the accuracy of the modified version of code \cite{junaid:clustering}, \cite{ozturk:quality}. 
+%Onoma et al. \cite{onoma:reason} listed scenarios in which, performing regression testing is essential: 1 - developing a product family, 2 - maintaining large programs over a long period of time, and 3 - evolving a rapidly changing software product. In spite of significance of regression testing, it is attributed as an immensely expensive process that relies on frequently re-execution of grave sets of old and new test cases to guarantee reliability of the software under test \cite{zhang:costs}, \cite{rothermel:prioritizing}. 
+For example, in Google developers make more than 20 changes to software code per minute, which requires to run 100 million test cases per day \cite{kumar:development}. Regression testing alone consume over 80\% of the testing budget \cite{hall:review}. 
+%Even, it may take as much as 50\% of the software maintenance costs \cite{kung:ooprogram}. This contrasts with the limited time and resource available for testing. Testers often complaint it is infeasible to run all test cases in each iteration of regression testing \cite{rothermel:prioritizing}, \cite{khalilian:historical}, \cite{do:constraints}. 
+
+Different techniques proposed in the literature to address the resgression testing problem fall into three categories, which regression test selection (e.g., \cite{harrold:empirical}, \cite{rothermel:analyzing}), test suite reduction (e.g., \cite{jones:reduction}, \cite{offutt:procedures}), and test case prioritization (e.g., \cite{elbaum:family}, \cite{rothermel:prioritizing}). Test case prioritization techniques are mostly greedy approaches. These techniques try to mitigate the time and resource limitation problem through scheduling earlier execution of most important test cases. The aim in prioritization is to increase the effectiveness of test cases to meet some performance goal \cite{rothermel:prioritizing}. The most persuaded goal involves the rate of fault detection, which indicates how quickly faults are detected within the testing process.
+%In fact, to be competitive with the retest-all strategy of regression testing, one should assume that prioritization techniques does not require to execute all test cases and often stop at a certain point. This idea is a better match for the limited time and resources we face in practice. Therefore, 
+In fact, due to limited time and resources available in practice, it is critical to achieve the highest possible number of detected faults in order to maximize the reliability of system under test. Additionally, the faster the rate of fault detection for the system under test, the sooner feedback can be provided for the test team. This lets software engineers begin resolving faults earlier than might otherwise be possible. 
+
+Majority of the existing prioritization techniques \cite{junaid:clustering}, \cite{elbaum:family}, \cite{jeffrey:slices}, \cite{kim:history}, \cite{mirarab:bayesian}, \cite{rothermel:prioritizing} use the information gathered from the previous executions of test cases, e.g. code dependency relations, as a basis for the applied criteria to order test case executions. However, the coverage base techniques mostly fail to consider that the different code components have different importance from the user point of view. Therefore, the accordant test cases cover the most critical, or frequently used parts of the code should not be assigned priorities uniformly compared to the other parts of the code. In other words, apart from meeting the main goal of prioritizing test cases to faster reveal potential faults in software code,  prioritization techniques also need to meet user requirement based goals. In this regard, some requirements have higher priority compared to the others. For example, to have a specific degree of code complexity as a user requirement, there should be a skew in the assigned priority values to test cases based on relevance of test cases to meet this user requirement. Moreover, software systems are built upon product requirements in which, some components might be more critical, error-prone features or more frequently utilized ones by users \cite{junaid:clustering}. In such cases, which could drive from user requirement specification, higher priorities need to be assigned to relevant test cases compared to the others. Another reason to prioritize test cases regarding user requirement is the fact that testers\textsc{\char39} commonly have limited knowledge about software code to understand the cause of errors and problems. In that, software requirement information helps identify potential sources of many problems in software code. 
+
+Although the importance of adapting requirement specification information into testing phase is well understood by the requirements engineering community \cite{bach:risk}, few studies have addressed the use of requirements during software regression testing \cite{junaid:clustering}, \cite{ozturk:quality}, \cite{saleh:goaldriven}, \cite{Kavitha:requirement}, \cite{krish:varying}, \cite{mahfuzul:multiobjective}, \cite{marchetto:multi}. The results of using requirement information within scheduling the order of execution test cases clearly denotes that utilizing this information increases the overall ability of fault detection in test case prioritization. One related study is the research report provided by Srikanth et al. \cite{srikanth:system} indicating that, with utilizing fault proneness of requirements during test case prioritization, severe faults could be detected with more ease. 
+
+In one state-of-the-art study introduce by Ozturk et al. \cite{ozturk:quality}, the authors have investigated test case prioritization using software quality metrics. It makes possible to determine test case priority values ahead of test event. Indeed, the strategy is a type of static code analysis that can be done without having to run the code \cite{ozturk:quality}. Nevertheless, they disregarded program structure type (PST) and deemed every quality metric criteria are uniformly effective in prioritizing test cases. However, as to researchers and practitioners not all metrics are actually useful or appropriate for different code structure types \cite{suresh:metrics}. So, the idea of this approach is that for each program under test we first need to specify the specific type of program structure. Subsequently, have higher priority for those software quality metrics as criteria to prioritize test cases that deem more effective for that specific structure type. Thereupon, the test case sets focus to test each of those reordered set of software quality metrics receive the execution priority values accordingly. Our motivation to implement this approach, the way it defined above, is that although meeting different software quality metrics as desired user requirements are of great importance; yet, test case prioritization as a technique to regression testing poses a substantial amount of computations. Due to different types of program structures, it seems necessary to reorder and prioritize between the software quality metrics. Note that, the process of deciding about appropriate software quality metric order to apply in our technique is just one-time computation and once we have it, we can use this information for the other program structure types of the same type as well. As soon as we have this ordering for software quality metrics, we can actually nullify the effect of those of them from the computations for test case execution priority values that have been assigned with the lower priority values in the ordered set. This, as a result, achieves a decrease in the cost and resource consumption for regression testing.
+
+Another aspect about the regression testing that inspired us to perform this experiment was the large data collected from frequent execution of test cases. Although the majority of existing prioritization techniques disregard this data, the regression testing in nature is a memory-full test and the data gathered in the memory about the previous behavior of test cases in detecting faults could help as a source to learn from. The inputs of our prioritization technique are the ordered set of relevant software quality metric to the program under test structure type and the coverage information of test cases for code components in a desirable granularity level. This idea could best be implemented using the machine learning algorithms as the many employed techniques in this area to create algorithms to learn and make predictions from data sets. As the machine learning techniques seek to get computers to perform tasks without being explicitly programmed. Given the large body of computations need to be perform to prioritize test cases in each regression test session, application of a technique to gradually reduce the degree to which the prioritization technique needs to do computations for priority values to carry out the given task, seems necessary. Motivated from this idea, we first partitioned the data collected from multiple executions of our prioritization technique into two parts and used the first 67\% of data as the training set. We chose XYZ algorithm to learn the relationship between the order of prioritized set of software quality metrics used as prioritization criteria and the effectiveness of final ordered test cases on this basis. The Machine learning algorithm work by building a model from a training set. A training set is a data set that is input into an algorithm where the correct outputs are already known. The ML algorithm built the model as it red the training set. Subsequently, we checked the predictions for the remaining part of the data set. We provided two different implementations of our prioritization technique, one with the presence of the machine learning algorithm to predict future effective ordering for software quality metric set and lack thereof. The results substantiate that application of machine learning could help faster detection of fault by reducing the time required for prioritization computations and also provide more efficient prioritization test case ordering accordant to the program structure type. The learned lessons from our experiment could be employed in software development environments attempt to prioritize test cases for withe box software testing with available information about program structure type.  
+
+%need to complete brief description of your designed methodology
+The context for conducted experiments in this paper is the controlled environment performed in a research lab in the Louisiana State University. Therefore, it is considered as an off-line experiment. The subjects are the six programs in C we chose based on the prevalence in the similar studies in the literature to make the experimental results more comparable. The detailed description of aforesaid programs has been provided in the section 4.1.
+
+Our main contributions in this paper are threefold. First, we propose a requirement based test case prioritization technique that reorders and schedules the executions of test case sets based on their relevance to the prioritized software quality metrics to meet. The criteria to prioritize software quality metric in turn is based on the expedience of metrics to the structure type of the program under test. Secondly, we introduce a heuristic to apply machine learning algorithm to the data set of software behavior including the information of test case orders and fault manifestation from the past sessions of regression test executions. The aim is to mitigate the problem of immense computations during test case prioritization and achieve shorter computation time for test cases' scheduling after a while using history data of regression test. Thirdly, we extensively test our approach against the implementation of the state-of-the-art approach suggested by Ozturk \cite{ozturk:quality} on six C programs. We also investigated the effect of machine learning on the performance of the proposed approach by testing two different implementations: the initial version and the one with machine learning algorithm applied to. Experimental results show that our new approach, improves the rate of fault detection. In addition, though the application of machine learning to reduce the time and cost of regression testing is promising, further study needs to support the findings. 
+
+The rest of the paper is organized as follows: Section II describes the three research questions addressed in this paper. Section III provides knowledge about background and relevant research to our prioritization technique. Sections IV presents the detailed description of the experimental deign of this study. We have analyzed the findings of our experiments and their implications in section V. Section VI discusses the main threats to the validity of this controlled experiment study and some of measures we took to mitigate. Finally, Section VII and VIII presents conclusions and discusses future work.
+
+\section{research questions}
+the fundamental research questions this paper tries to address can be states as follows.
+\begin{itemize}
+\item RQ1: How effectively can test case prioritization perform in faster detecting faults considering software quality metrics aware of program structure type?
+
+In other words, whether identification of more relevant and pressing software quality metrics, e.g. depth-of-inheritance, coupling, cyclomatic complexity, etc, with respect to different program structures, e.g. structural, modular, object-oriented, etc., is important while doing requirement based test case prioritization? Is it beneficial  to assign different priority values to the test cases correlated with each software quality metric based on the priority of requirements? 
+\item RQ2: What is the most effective category of software quality metrics need to be considered for each type of program structure?
+
+Obviously, not all defined software quality metrics are relevant to every program structure type. It seems necessary to differentiate between different software quality metrics and provide a category of more relevant ones and order them (prioritize software quality metrics) as more appropriate, desirable and critical ones for each program structure type we face.
+\item RQ3: How effectively machine learning approaches can help automatically decide about appropriate software quality metrics to apply in test case prioritization having the information of program structure type?
+
+The fact that the regression testing in nature is a memory-full test type makes it possible to use this data for more effective reordering of test cases in future runs. The availability of the data from previous executions of regression testing have been regarded from different respects to do history-based test case prioritization \cite{kim:history}, \cite{khalilian:historical}, \cite{lin:history}. Nonetheless, it is possible to apply machine-learning algorithms to learn from the behavior of software under test. Given the information of program types, the impact of application of different software quality metrics as criteria to schedule correlated test cases needs to be investigated. The empirical findings could help as a data source understand whether learning from previous executions could improve the effectiveness of applied test case prioritization technique in terms of fault detection.
+\end{itemize}
+
+%needs to be modified
+\section{Background and Related Work}
+The formal definition of the Test case prioritization problem provided by Rothermel et al. \cite{rothermel:empirical} as finding $\textnormal{T}'\in  \textnormal{PT}$ , such that $(\forall \textnormal{T}'')(\textnormal{T}'' \in \textnormal{PT} )(\textnormal{T}'' \neq \textnormal{T}')[f(\textnormal{T}') \geq f(\textnormal{T}'')]$. In this definition, $\textnormal{PT}$ denotes the set of all possible permutations of a given test suite $\textnormal{T}$ , and $f$ denotes a function from $\textnormal{PT}$ to real numbers.
+To select and prioritize test cases based on the software quality metrics as user requirements, a number of techniques have been proposed and studied empirically. At first, we narrow down our study of the related literature into the directly related studies to our prioritization technique. The first two studies presented in this section adapted software quality metrics as criteria to establish requirement based test case prioritization.  Subsequently, the more broad area of related work in the context of requirement based test case prioritization techniques is studied.
+
+In the most relevant study to us \cite{ozturk:quality}, a test case prioritization model based on several quality metrics such as size, complexity, and object orientation was offered. At the first phase, when using the measurements of over 20 code quality metrics, this model created a novel metric, called Quality Risk Ratio. This metric served as an indicator of methods and classes need to be refactored. The authors scheduled the next phase as synthesizing the QRR results with the test cases\textsc{\char39} code coverage data. Thus, the applied prioritization technique took both method-based and class-based approaches to schedule orders. The results of comparisons between the proposed model and that of the well-known, risk-based approach demonstrated that using the proposed metric-based prioritization technique gives approximate results with legacy techniques in seconds. The significance of this prioritization approach is that, it does not require any prior knowledge or expertise about domain code or requirement information. Additionally, not only it prioritizes test cases, but also reports a priority list for the problematic methods and classes that should be refactored. 
+
+Another background study is the investigated requirement based prioritization approach proposed by Arafeen and Do \cite{junaid:clustering}. The research aimed at exploring answer for the question regarding the impact of incorporating code analysis data on effective test case prioritization. An important point of difference between their research and other requirement based prioritization techniques is that, the authors explored whether clustering of test cases based on requirement similarities could improve the effectiveness of requirement based regression testing and particularly prioritization techniques. Employing a text-mining technique in their approach provided a means to cluster relevant requirements. Further, for each cluster, it incorporated code complexity for test case prioritization. Meanwhile, it created a set of reordered test cases using priority of the requirements. As the results of the experimental evaluations showed, using requirements-based clustering approaches improves the effectiveness of prioritization techniques in early fault detection.
+%needs to be modified
+
+After studying more relevant prioritization techniques to our proposed requirement based approach, we found several techniques introduced in the literature based relevant to our study as they share the criteria for prioritizing test cases to meet some requirement goals. We provide a summary of these studies in the following part of this section.
+
+Salehi et al. proposed a technique \cite{saleh:goaldriven} to address prioritizing test cases according to user requirements at the system level. The authors applied quality metrics as a foundation for the adopted goal-driven approach. To perform this, the focus of the proposed approach was on issues in industrial environments, requiring test teams to balance between quality, cost and effort in a project to meet multiple goals. Salehi et al. sole used non-code metrics presuming that the code based data is not often available. The mapping criteria for test cases and requirements was based on tractability links recovery technique, and the collected data subsequently incorporated to prioritize test cases with the aim of maximizing user satisfaction.
+
+In two similar experimental studies to us, Marchetto at al. \cite{marchetto:multi} and Mahfuzul et al. \cite{mahfuzul:multiobjective} introduced multi-objective prioritization techniques,  that scheduled the execution of test cases such a way that maximized the rate of detecting technical and business critical faults. Similar to other requirement based prioritization approaches, the authors retrieved the mapping data between requirements specification and test cases. Meanwhile, the recovered traceability links among system requirements and source code was included. This data provided applying the Latent Semantic Indexing technique. The strength of the proposed metric-based technique is to identify critical and fault-prone parts of the software artifacts automatically. So that, the related test cases with these parts receive a higher priority and therefore, run earlier during regression test sessions.
+
+In two separate studies \cite{Kavitha:requirement}, \cite{krish:varying} in the context of requirement based test case prioritization at system level, the authors proposed techniques to offer a model for system level test case prioritization. To improve user satisfaction with software quality, the proposed techniques employed different criteria according to which, the models prioritized system level test cases. A number of the applied criteria were customer priority, changes in the requirements, implementation complexity, and in one case \cite{krish:varying}, usability, application-flow and fault impact. The findings of the studies showed an increase in the rate of severe faults detection in practice. Meantime, the significance of the two studies is that not only the two proposed prioritization methods are cost effective, but they also persuasive objective results of the experimental evaluations on real-world software projects.
+
+Another study in the context of requirement based test case prioritization techniques proposed by Zhang et al. \cite{zhang:costs}. The authors adapted the impact of varying costs of execution of test cases, as an additional factor, to the calculations of determining the proper order for executing test cases. The proposed technique regards different costs associated to tests since On one side, the user requirement priorities are changing frequently during the software development, and uniformly categorized test requirements often fail to address stakeholders\textsc{\char39} expectations. On the other side, test cases need different execution time and resources. Given this fact, the authors also incorporated a corresponding metric into the prioritization strategy. Therefore, the proposed technique should be attributed as a bi-criteria test case prioritization. 
+
+In a similar study to above, Ma and Zhao \cite{ma:structure} introduce a requirement based test case prioritization technique which also takes the different severity of the faults into consideration. The technique attempted to improve the rate of severe faults\textsc{\char39} detection for both regression and non-regression testing. To achieve this, the proposed prioritization technique analyzed program structure and evaluated testing-importance for each module covered by test cases. The authors introduce a tool build upon the proposed prioritization technique called Aropas. The significance of the technique is that it is either applicable to non-regression testing scenarios. The reason is that the strategy is not only based on difference between the software versions or the data collected during previous test sessions, but also a new prioritization index called testing-importance of module (TIM). This index combined the two prioritization factors: fault proneness and importance of module. Therefore, the authors suggested a bi-criteria metric based prioritization strategy. Assigning higher priority values to those test cases covering important parts of the system cause early revelation of severe faults.  
+
+
+\begin{comment}
+\begin{table}
+\centering
+\caption{Frequency of Special Characters}
+\begin{tabular}{|c|c|l|} \hline
+Non-English or Math&Frequency&Comments\\ \hline
+\O & 1 in 1,000& For Swedish names\\ \hline
+$\pi$ & 1 in 5e& Common in math\\ \hline
+\$ & 4 in 5 & Used in business\\ \hline
+$\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
+\hline\end{tabular}
+\end{table}
+\end{comment}
+
+\begin{table*}
+\centering
+\caption{Experiment Overview.}
+\begin{tabular}{|c l|} \hline
+\textbf{Goal} & \multicolumn{1}{p{13cm}|}{Study the effect of re-ordering and inclusion/exclusion of Software quality metrics as two treatments in fault detection effectiveness of prioritization techniques.} \\ \hline
+\textbf{Main
+Factor}& Scheduling of test cases for Software quality metric based prioritization technique.\\ \hline
+\textbf{Dependent
+variables}& Effectiveness in terms of fast detection of faults.\\ \hline
+\textbf{Independent variables}& Software quality metrics, Program structure type, Granularity of code coverage.\\ \hline\end{tabular}
+\end{table*}
+
+\begin{table*}
+\centering
+\caption{The subject programs used in the experiments \cite{henard:comparing}.}
+\resizebox{\textwidth}{!}{
+%\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l c l r r r r r r |}   
+  \hline
+\textbf{Program} & \textbf{Test Cases} &  \textbf{Information} & \textbf{V0} &
+\textbf{V1} & \textbf{V2} & \textbf{V3} & \textbf{V4} & \textbf{V5} \\ 
+\hline   %\hline
+ & & Version & 2.2(1996) & 2.2 (1998) & 2.3 (1999) & 2.4 (1999) & 2.5 (2002) & 2.7 (2010) \\
+ GREP & 440 & Size & 8,163 & 11,988 & 12,724 & 12,826 & 20,838 & 58,344 \\
+ & & Faults & - & 56 & 58 & 54 & 59 & 59 \\
+ 
+ & & Version & 3.01 (1998) & 3.02 (1998) & 4.0.6 (2003)  & 4.0.8 (2003)  & 4.1.1 (2004) & 4.2 (2009) \\
+ SED & 324 & Size & 7,790 & 7,793 & 18,545 & 18,687 & 21,743 & 26,466 \\
+ & & Faults & - & 16 & 18 & 18 & 19 & 22 \\
+ 
+  & & Version & 2.4.3 (1993) & 2.4.7 (1994) & 2.5.1 (1995) & 2.5.2 (1996)  & 2.5.3 (1996) 2.5.4 & (1997) (2004)\\
+ FLEX & 500 & Size & 8,959 & 9,470 & 12,231 & 12,249 & 12,379 & 12,366 \\
+ & & Faults & - & 32 & 32 & 20 & 33 & 32 \\
+ 
+   & & Version & 3.75 (1996) & 3.76.1 (1997)  & 3.77 (1998)  & 3.78.1 (1999) & 3.79 (2000) & 3.80 (2002)\\
+ MAKE & 111 & Size & 17,463 & 18,568 & 19,663 & 20,461 & 23,125 & 23,400 \\
+ & & Faults & - & 37 & 29 & 28 & 29 & 28 \\
+ 
+    & & Version & 1.0.7 (1993)  & 1.1.2 (1993) & 1.2.2 (1993) & 1.2.3 (1993) & 1.2.4 (1993) & 1.3 (1999)\\
+ GZIP & 156 & Size & 4,324 & 4,521  & 5,048 & 5,059 & 5,178 & 5,682 \\
+ & & Faults & - & 8 & 8 & 7 & 7 & 7 \\ \hline
+ 
+\end{tabular}
+%\end{adjustbox}
+}
+\end{table*}
+
+
+% end the environment with {table*}, NOTE not {table}!
+\begin{comment}
+\subsection{Figures}
+
+\begin{figure}
+\centering
+\epsfig{file=fly.eps}
+\caption{A sample black and white graphic (.eps format).}
+\end{figure}
+\end{comment}
+\begin{figure}
+\centering
+\epsfig{file=Understand.eps, width=3.3in}
+\caption{Understand\texttrademark tool IDE environment.}
+\end{figure}
+
+\begin{figure*}
+\centering
+\resizebox{\textwidth}{!}{
+\epsfig{file=studyOneBoxPlots.eps}
+}
+\caption{APFD values for the state-of-the-art (SA) versus proposed approach (PR) on V1 to V5.}
+
+\end{figure*}
+
+
+\section{Experimental Design}
+This section presents details on the preparations for our experiment. The overall design, hypotheses, subject systems used, subjects, data collection and the
+general details of running the experiment is presented.
+
+\subsection{Study Subjects}
+The five open-source programs \cite{henard:comparing} written in C are available to download from the GNU FTP server at this address: http://ftp.gnu.org/. Test suites for the five programs are available from the Software Infrastructure Repository (SIR) \cite{do:supporting}. Grep and Sed are popular command-line tools for searching and processing text matching regular expressions. Flex is a lexical analysis generator, while Make controls the compile and build process and GzIP is a widely-used compression utility. This set of programs has been widely used to evaluate test techniques used by researchers in several studies \cite{henard:comparing}. The short description of programs used in our experiment provided in the table 1. For each of them, the number of tests cases, the six considered versions together with their size in lines of code and number of embedded faults are presented. The ability to generalize from the findings of this paper is further elaborated when discussing the threats to the validity in the experiment.
+
+
+%Our conducted experiment addresses a real problem, i.e. the differences in individual performance and the understanding of the differences.
+
+
+\subsection{Experimental Goal and Hypotheses}
+In order to determine if one or several independent variables have significant effect on one or several dependent variables researchers need to conduct hypothesis testing \cite{wohlin:experimentation}. Before the statement and formally formulating hypothesis in this paper, we need to specify dependent vs. independent variables, factors and treatments applied. The overview of the experiment is shown in Table 2.
+The main factor being analyzed is the scheduling of test case executions. This scheduling needs to consider the accordance of priority values assigned to test cases with software quality metrics aimed to be achieved. We conducted two sets of studies which share the same factor. Also, we used two different treatments in each. In the former study, we implemented and the technique suggested by Ozturk et al. \cite{ozturk:quality} and a sample implementation of our proposed technique with the prioritized list of software quality metrics accordant to structure type of each program under test as the test case prioritization criteria. In the second study on the other hand, we applied two different implementations of our approach, one initial version used in the first study, and the other one based on machine learning algorithm as to the treatments employed.
+
+The detailed null hypotheses are
+given below. The alternative hypotheses are l-tailed
+predicting the program structure aware technique in the first study and machine learning based version in the second study perform better.
+
+$\textnormal{H0} _{\textnormal{PST}}$: There is no significant difference in fault detection effectiveness between the state-of-the-art approach provided by Ozturk et al. $(\textnormal{TCP} _{\textnormal{SQM}})$ and
+our proposed test case prioritization technique $(\textnormal{TCP} _{\textnormal{SQM,PST}})$ for the six studied programs. In other words: $\textnormal{APFD}(\textnormal{TCP} _{\textnormal{SQM}}) = \textnormal{APFD}($-$\textnormal{TCP} _{\textnormal{SQM,PST}})$.
+
+$\textnormal{H1} _{\textnormal{PST}}$: The alternative hypothesis to $\textnormal{H0} _{\textnormal{PST}}$ is that our proposed test case prioritization technique performs better (has a higher rate of fault detection)
+than the state-of-the-art approach, which means: $\textnormal{APFD}(\textnormal{TCP} _{\textnormal{SQM}}) \neq \textnormal{APFD}($-$\textnormal{TCP} _{\textnormal{SQM,PST}})$. 
+\begin{comment}
+We can reject the null
+hypothesis $H0 _{PST}$ considering all tasks in both Groups A
+and B (p-value=0.000036 and 0.00005 respectively).
+The effect size is medium (0.51 and 0.55) for both
+groups.
+\end{comment}
+
+$\textnormal{H0} _{\textnormal{ML}}$: There is no significant difference between fault detection effectiveness of the initial version of proposed approach $(\textnormal{TCP} _{\textnormal{SQM,PST}})$ with that of the version with the machine learning algorithm applied to $(\textnormal{TCP} _{SQM,PST,ML})$ for the six studied programs. In another way: $\textnormal{APFD}($-$\textnormal{TCP} _{SQM,PST}) = \textnormal{APFD}(\textnormal{TCP} _{\textnormal{SQM,PST,ML}})$. 
+
+$\textnormal{H1} _{\textnormal{ML}}$: The alternative hypothesis to $\textnormal{H0} _{\textnormal{ML}}$ is that our proposed test case prioritization technique supplied with machine learning algorithm performs better (has a higher rate of fault detection)
+than the initial version of that approach, which means: $\textnormal{APFD}(\textnormal{TCP} _{\textnormal{SQM,PST,ML}}) \neq \textnormal{APFD}($-$\textnormal{TCP} _{\textnormal{SQM,PST}})$.
+
+\subsection{Task Categories}
+ToDo.
+\subsection{Data Collection}
+We chose the tool name Understand\texttrademark 3.0 from SciTools which is a source code comprehension tool with an IDE and a built-in editor. We used this tool to visualize the code and perform impact analysis as well as static metrics analysis. This tool also provided us with the information of test cases' relevance to the quality metrics aimed to be tested. A sample image from the tool environment has been provided in Figure 1. 
+\subsection{Running the Experiment}
+ToDo.
+\subsection{Evaluation}
+To evaluate our test case prioritization technique, we first employed the technique to prioritize test cases executed on the first version of subject programs (V0). The output of this step is the ordered sequence of test case executions provided the information about program structure type and coverage information
+obtained from execution of the test suite on V0. Then, the resulting prioritized (ordered) test suite is evaluated for the five subsequent faulty versions (V1 to V5). The faults have been seeded using mutation testing. The proposed prioritization technique has no information about the faults seeded. To assess the prioritized test suite, we use a standard measurement, commonly used in the literature in this context. This measure is called APFD, which is representative of the Average Percentage of Faults Detected. APFD uses to assess the rate of fault revelation for prioritization techniques regardless of cost and severity of detected faults. This measure is calculated according to the following formula \cite{zhang:bridging}:\\
+
+
+$\textnormal{APFD}(\pi) = 1 - \frac{ \displaystyle \sum_{i=1}^{m}\textnormal{TF}_i }{\displaystyle nm} + \frac{\displaystyle 1}{\displaystyle 2n}$,    \\
+
+where $\pi$ is an ordering of the regression test suite \cite{henard:comparing}, $n$ and $m$
+are respectively the number of test cases and the number of faults in the different versions of programs and $TF_i$ the smallest number test cases testers have to go through in sequence until fault $i$ is exposed. 
+In order to account for the stochastic nature of the prioritization algorithms, we repeated the process of executing our proposed approach on V0, evaluating it on V1-V5 and APFD calculations on each program for 100 times. Similar to other prioritization techniques, our technique also had to face ties while ordering test cases. A tie occurs when two or more test cases in the ordering have identical values for their execution order. To break such ties, our strategy is to make a random choice. However, randomly selecting test cases with identical priority values could cause different ordering and fault detection results in practice. It also increases the randomness of prioritized order of test cases and final results of fault detection. Having this in mind, we tried to collect a set of different outcomes for the prioritization approach by repeating the experiments 100 times. This sample of all possible executions allows us to use standard inferential statistical techniques to investigate the significance and compare the performance of the two implementations of the proposed prioritization technique against each other. The observable statistical representations of our findings in box-plot diagrams has been provided in figures 2. 
+
+\section{Experimental Results and Analyses}
+This section presents the results of the two studies as observational statistics display the fault detection effectiveness of the two techniques compared in each. parts of the experiment. Descriptive statistics are provided in Table 3 along with box plots in Figure 1 for fault detection effectiveness. 
+\begin{comment}
+We report on the effect of layout on accuracy and speed in all task categories as
+well as in each of the six task categories. Effect size is
+also reported using Cohen's d for accuracy and speed to
+facilitate easy comparison to other studies. 
+\end{comment}
+Since this is a within-subjects study, we use the paired Wilcoxon nonparametric
+test to determine significance of the results.
+
+\section{Threads to Validity}
+In this section, we overview certain respects in our experimental setup or issues in the methodology design that may threaten the reliability of our findings or the validity of the study. The discussed validity concerns are categorized into four groups: internal validity, external validity, construct validity and conclusion validity. We also include the designed approaches we used to minimize the impact of these threats on our findings.
+
+\subsection{Internal Validity}
+One of the major threats to the internal validity of our study is that the process of data collection and experimental setup and analysis is mostly done with a single researcher. Although we tried to mitigate this threat by discussing any unclear issue together and reviewed the data collection methodology along with the details of experimental setup, we can not disregard the risk that a single researcher has been biased and consistently extract wrong information. In the future, we hope to have larger research groups collaborate in the methodology design and setup, operation of experiments and results reviews.
+
+One of the threats to the validity of the both studies is our choice of the code coverage granularity. This is an important threat as all the evaluations and analysis of the results within the scope of this study are based on the test cases coverage level of code. There is a possibility that changing the granularity to more fine or coarse grained would give us a course of different results. To control the effect of granularity on the results, we repeated our experiments with two different levels of code coverage: branch and method coverage which the former is among the fine grained code coverage granularities while the latter is considered as a coarse grained one. The findings of repeating by keeping all other settings unchanged shows no significant change in terms of performance of two compared approaches within the studies.
+
+Another important challenge to the internal validity in the second study is regarding the choice of machine-learning algorithm as well as the number of training instances, and the type of employed data. For this study, we used the 67\% of total 100 executions of regression testing as the training set and the remaining 33\% to compare the improved performance of our technique, if any, with the application of machine learning algorithm and lack thereof. However, we need to investigate different machine learning algorithms. Also we need to study and report the effect of using training sets of different sizes.
+
+The context and nature of programs we used in our study also could be a concern to the validity of our findings in this paper. As we mentioned, these six open-source programs are available online for the use of researchers. In addition, such as many research on software testing and test techniques that rely on experimental studies based on mutation testing, this study is also prone to a potential threat to validity, leading to possible Type I errors and incorrectly rejecting the Null Hypothesis \cite{papadakis:threats}. Therefore, as a measure to control the validity threat related to the faulty versions used, we aim at extending this study with using subject programs from industry with real faults in them.
+
+The last identified and minimized threat to the internal validity is our criteria to choose between test cases to break ties, which are empirically shown to have high likelihood to occur in prioritization heuristics \cite{eghbali:lexico}. As we mentioned in the evaluation section, with the random choice between the test cases with identical priority values, the performance of such iterative prioritization schemes degrade as the number of ties encountered in prioritization steps increases. To minimize the impact of the random selection, we repeated all experiments 100 times with different selection of test cases in the event of tie in ordered sequence of test case executions. This large sample size of execution orders while keeping all other factors unchanged allows us use standard inferential statistical techniques to compare techniques against each other with minimized impact of randomness in the implications of results.   
+%\begin{itemize}
+%\item granularity of or code coverage info.
+%\item ML algorithm
+%\item programs used(context and nature cause some effect)
+%\item  Seeded faults
+%\item  random idea to break ties.
+%\end{itemize}
+
+\subsection{External Validity}
+The most important threat to the external validity of our study is our chose of subject program which was based on their common use in the studies of the same context to give the researchers an evidence to be able to compare the results with other such studies. However, the limited diversity of the programs that hinders generalizing from our findings in this study and their implications. As our future work, we aim to repeat our experiment with the use of more subject programs of different structure types and programming languages.
+
+\subsection{Construct Validity}
+There are several validity threats to the design and implementation of this study that are consider as construct validity threats. First, our implementation of the state-of-the-art software quality metric based proposed by Ozturk et al. as well as the two implementations of the proposed technique in this paper could be a potential source of construct validity threats. To minimize this threat, one researcher provided the implementation for each of the technique and the other one reviewed the code and disagreements discussed together. Another source of construct validity threat is our employed tool, Understand, to extract the information of related test cases with the software quality metrics used in this study. The tool is not open-source. Yet, it can be considered as a best match for our purpose to provide code visualization and analysis capabilities for programs written in c/C++, Java, Python and many others.
+\begin{comment}
+\begin{itemize}
+\item  implementation of other SQM based TCP technique.
+\item code coverage extraction tool.
+\item Faulty versions
+
+There are several validity threats to the design of this study.
+Our choice of..
+should of course..
+this would allow.....would give...
+
+During data collection we mostly used a...
+
+Another threat to the data collection is that our chosen...
+
+did not always fit..
+
+Since we had no...
+\end{comment}
+\subsection{Conclusion Validity}
+We see few threats to the results of numerical analysis and our evaluations due to the precision of estimations resulted from the statistical tests. 
+
+\section{Conclusions}
+In this study we investigated requirement based test case prioritization using software quality metrics regarding the structure type of the program under test. This approach assigned higher priority values to those test cases that cover testing for quality metrics have higher priority to be met either due to the user preference or according to the structure type of software under test. Our motivation to implement this approach is at the first place to efficiently choose software quality metrics due to the actual relevance to the program code structure and at the second place, to substantially reduce the amount of computations as it seems legitimate to prioritize and choose between the software quality metrics instead of applying them blindly. We used six open-source programs in C language commonly used in similar studies in this context. The statistical evaluations of the results of empirical experiments with the large number of sample size of regression test executions show that the proposed technique outperforms the state-of-the-art software quality metric based prioritization technique with respect to faster detection of injected faults in the benchmark programs.
+
+In the second portion of this experimental study, we regarded the use of large data collected from frequent execution of test cases. We utilized the collected data about the previous behavior of test cases in detecting faults as a source to learn from and perform more efficiently in future. To implementing this idea, we applied the machine learning algorithm to learn from, extract and refine a pattern and make predictions about the best practices of ordering software quality metrics and test cases accordingly to faster detect faults. Given the large body of computations need to be perform to prioritize test cases in each regression test session, application of a technique to gradually reduce the degree to which the prioritization technique needs to do computations for priority values to carry out the given task, seemed necessary. We provided two different implementations of our prioritization technique, one with the presence of the machine learning algorithm and one lack thereof. The results demonstrate that application of machine learning could help faster detection of fault by reducing the time required for prioritization computations and provide more efficient prioritization test case ordering accordant to the program structure type.
+ 
+\section{Lessons Learned and Future Research}
+As a future work we plan to repeat the performed experiment in the context of industrial software development using more open source subject programs from other online databases such as GitHub or Bitbucket. We also plan to use programs in other programming languages such as Java and Python.
+
+ToDo.
+%ACKNOWLEDGMENTS are optional
+\section{Acknowledgments}
+We are grateful to Dr Alireza Khalilian for sharing his pearls of wisdom with us during the course of this research, and also benefited us with his comments that greatly improved the manuscript.
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{main}  % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+%\balancecolumns
+
+\end{document}

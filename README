@@ -1,0 +1,26 @@
+=================
+Usage:
+
+(1) Compile and create a PDF file: 
+    $ make
+    You should see a "paper.pdf" in the current directory. 
+
+(2) Clean the directory:
+    $ make clean
+
+(3) Edit the latex file:
+    $ vi main.tex
+
+==================
+Other reference:
+
+    https://www.latex-project.org/ 
+    https://en.wikibooks.org/wiki/LaTeX
+
+
+==================
+Source:  http://www.acm.org/sigs/publications/proceedings-templates
+
+
+
+
