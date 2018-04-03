@@ -56,6 +56,8 @@
 \usepackage{wrapfig}
 \usepackage{placeins}
 \usepackage{graphicx}
+\usepackage{mathtools}
+
 
 \begin{document}
 %
@@ -65,7 +67,7 @@
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
 %previous title: Test Case Prioritization Based on Software Quality Metrics Incorporating Code Paradigm Data
-\title{Leverage Expedient Software Quality Metrics in White Box Test Case Prioritization\titlenote{(Produces the permission block, and
+\title{Decentralized Task Scheduling Approach for Running Many-Task Application in the Cloud\titlenote{(Produces the permission block, and
 copyright information). For use with
 SIG-ALTERNATE.CLS. Supported by ACM.}}
 %\subtitle{[Extended Abstract]
@@ -98,7 +100,7 @@ SIG-ALTERNATE.CLS. Supported by ACM.}}
 % without further effort on your part as the last section in
 % the body of your article BEFORE References or any Appendices.
 
-\numberofauthors{2} %  in this sample file, there are a *total*
+\numberofauthors{1} %  in this sample file, there are a *total*
 % of EIGHT authors. SIX appear on the 'first-page' (for formatting
 % reasons) and the remaining two appear in the \additionalauthors section.
 %
@@ -121,10 +123,10 @@ Yalda Fazlalizadeh\titlenote{Computer Science PhD student.}\\
        \email{\textnormal{yfazla1@lsu.edu}}
 % 2nd. author
 \alignauthor
-Anas Mahmoud\titlenote{Assistant Professor in Computer Science Department, Louisiana State University.}\\
+Gerald Baumgartner\titlenote{Associate Professor in Computer Science Department, Louisiana State University.}\\
        \affaddr{Louisiana State University}\\
        \affaddr{Baton Rouge, LA, USA}\\
-      \email{\textnormal{amahmo4@lsu.edu}}
+      \email{\textnormal{gb@csc.lsu.edu}}
 }
 % There's nothing stopping you putting the seventh, eighth, etc.
 % author on the opening page (as the 'third row') but we ask,
@@ -133,84 +135,125 @@ Anas Mahmoud\titlenote{Assistant Professor in Computer Science Department, Louis
 %\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
 %email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
 %(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
-\date{30 July 1999}
-% Just remember to make sure that the TOTAL number of authors
+\date{20 March 2018}
 % is the number that will appear on the first page PLUS the
 % number that will appear in the \additionalauthors section.
 
 \maketitle
 \begin{abstract}
-Regression testing is a test runs after each change or modification to ensure that existing functionality of software has not regressed. Among various techniques introduced to alleviate the problem of heavy costs of frequent runs, test case prioritization schedule execution of test cases to maximize some performance goal. Today, the importance of adapting software requirements as test case prioritization criteria is well-understood. There are some research studies consider software quality metrics (SQM) as quality assurance requirements to be met while prioritizing tests. However, they failed to consider higher priority to fulfill those quality metrics that deem more effective with respect to structure type of program. In this paper, we conducted empirical studies using six open-source programs with different versions for each to investigate this effect. Furthermore, the data collected from recorded behavior of software during previous executions of test cases inspired us to use it as a source to perform better in future. To our knowledge, this study is the first one on the impact of machine learning on test case prioritization. The results show a decrease in computation time for test prioritization while demonstrate an increase in overall performance of applied prioritization technique within several executions of regression testing. 
+ 
 \end{abstract}
 
 \begin{comment}
-After each change or modification in software code a test phase is required to ensure that the existing functionality of software has not regressed. This test is called regression testing. There are various techniques of regression testing: Retest-All, Regression Test Selection, Test Case Prioritization (TCP). Test case prioritization techniques are used to improve the cost-effectiveness of regression testing. The goal is to schedule execution of test cases such a way that those test cases with higher probability to outperform others in software fault detection run earlier. With many ideas in the literature to prioritize test cases, adapting requirement specification information is well understood. The existing test prioritization techniques using software quality metric (SQM) as a user requirement. However, the effect for prioritizing test cases based on different SQM deem uniform. In this paper, we empirically explore the impact of prioritizing test cases based on SQMs accordant to each program structure in terms of the effectiveness in faster revealing faults. Furthermore, to our knowledge, this study is the first empirical study on the impact of the machine learning on test case prioritize with the aim of reducing the computation time for test case executions within several executions of regression testing.
+
 \end{comment}
 
-\keywords{Test case prioritization, Software Regression Testing, Require- ments-Based Test Case Prioritization, Software Quality Metrics, Software Quality Assurance}
-
 \section{Introduction}
-One of most important quality assurance measures during software maintenance is regression testing. 
-%The word regress means to return to an already existing previous state; so, regression testing is a kind of testing to ensure that a program has not regressed. 
-More specifically, the quality assurance team needs to conduct regression testing repeatedly after releasing each new version of the software to confirm the accuracy of the modified version of code \cite{junaid:clustering}, \cite{ozturk:quality}. 
-%Onoma et al. \cite{onoma:reason} listed scenarios in which, performing regression testing is essential: 1 - developing a product family, 2 - maintaining large programs over a long period of time, and 3 - evolving a rapidly changing software product. In spite of significance of regression testing, it is attributed as an immensely expensive process that relies on frequently re-execution of grave sets of old and new test cases to guarantee reliability of the software under test \cite{zhang:costs}, \cite{rothermel:prioritizing}. 
-For example, in Google developers make more than 20 changes to software code per minute, which requires to run 100 million test cases per day \cite{kumar:development}. Regression testing alone consume over 80\% of the testing budget \cite{hall:review}. 
-%Even, it may take as much as 50\% of the software maintenance costs \cite{kung:ooprogram}. This contrasts with the limited time and resource available for testing. Testers often complaint it is infeasible to run all test cases in each iteration of regression testing \cite{rothermel:prioritizing}, \cite{khalilian:historical}, \cite{do:constraints}. 
+Today, the enormous computation power and resource costs required in many scientific fields, such as astronomy, quantum chemistry, geophysics, or bioinformatics, makes it not feasible anymore to use the historical patterns for using the power of combined resources such as grids of desktop-based master-worker computers or traditional supercomputer grids. In the past decade, these problems have been addressed using cloud~computing and underlying technologies as an alternative to perform computations in distributed environments. Cloud~computing is useful to run wide range of applications such as generic word processing softwares to customized enterprise computer programs. It has changed the face of data storage and access through the numerous innovations to the field. Using this technology, today, the required hardware costs for mass computations has brought down to a large degree, while the information processing and computation speed has increased. However, the variations of resources in the cloud environment makes it difficult for many scientific applications that involve complicated communication and collaboration between sub-tasks, such as large dense matrix multiplications, to efficiently run on the cloud. The reason for this is because of performance variation of underlying resources in cloud~system, which makes the overall performance of computation obtain form different nodes in the overlay network to be unpredictable, and in many cases inefficient.
 
-Different techniques proposed in the literature to address the resgression testing problem fall into three categories, which regression test selection (e.g., \cite{harrold:empirical}, \cite{rothermel:analyzing}), test suite reduction (e.g., \cite{jones:reduction}, \cite{offutt:procedures}), and test case prioritization (e.g., \cite{elbaum:family}, \cite{rothermel:prioritizing}). Test case prioritization techniques are mostly greedy approaches. These techniques try to mitigate the time and resource limitation problem through scheduling earlier execution of most important test cases. The aim in prioritization is to increase the effectiveness of test cases to meet some performance goal \cite{rothermel:prioritizing}. The most persuaded goal involves the rate of fault detection, which indicates how quickly faults are detected within the testing process.
-%In fact, to be competitive with the retest-all strategy of regression testing, one should assume that prioritization techniques does not require to execute all test cases and often stop at a certain point. This idea is a better match for the limited time and resources we face in practice. Therefore, 
-In fact, due to limited time and resources available in practice, it is critical to achieve the highest possible number of detected faults in order to maximize the reliability of system under test. Additionally, the faster the rate of fault detection for the system under test, the sooner feedback can be provided for the test team. This lets software engineers begin resolving faults earlier than might otherwise be possible. 
+The reason for cloud's inefficiency for running large high-performance computing applications is because of the underlying virtualization technology that made cloud~system's implementation possible. With the increasing number of applications hosted by cloud providers, that mostly face high levels of fluctuations in computation intensity the allocated virtual machines will dynamically power up and down. Therefore, the providers have to examine different methods to optimize the energy consumption while keeping the computation transparency. This often leads to providers allocating fewer physical resources and therefore, virtual~machines' co-location on same devices and competing over CPU clock-time and other available resources and potential performance degradations~\cite{papadopoulos:virtual}. On the other side, code (task) migration within the distributed network of nodes in the cloud also brings concerns about internal network contention and saturation. Under such connections, the competitions over bandwidth, such as data ingest, $\textnormal{customer'}$ inner services communication, required IaaS communications, and possibly communications due to the proposed VM migrations, will affect the bandwidth~usage~\cite{raycroft:Performance}. This is a major hindrance toward cloud scalability and mandates attempting real-world policies and realistic testing scenarios to determine the optimal setup to solve the problem of volatile network bandwidth for a specific cloud.
 
-Majority of the existing prioritization techniques \cite{junaid:clustering}, \cite{elbaum:family}, \cite{jeffrey:slices}, \cite{kim:history}, \cite{mirarab:bayesian}, \cite{rothermel:prioritizing} use the information gathered from the previous executions of test cases, e.g. code dependency relations, as a basis for the applied criteria to order test case executions. However, the coverage base techniques mostly fail to consider that the different code components have different importance from the user point of view. Therefore, the accordant test cases cover the most critical, or frequently used parts of the code should not be assigned priorities uniformly compared to the other parts of the code. In other words, apart from meeting the main goal of prioritizing test cases to faster reveal potential faults in software code,  prioritization techniques also need to meet user requirement based goals. In this regard, some requirements have higher priority compared to the others. For example, to have a specific degree of code complexity as a user requirement, there should be a skew in the assigned priority values to test cases based on relevance of test cases to meet this user requirement. Moreover, software systems are built upon product requirements in which, some components might be more critical, error-prone features or more frequently utilized ones by users \cite{junaid:clustering}. In such cases, which could drive from user requirement specification, higher priorities need to be assigned to relevant test cases compared to the others. Another reason to prioritize test cases regarding user requirement is the fact that testers\textsc{\char39} commonly have limited knowledge about software code to understand the cause of errors and problems. In that, software requirement information helps identify potential sources of many problems in software code. 
+For applications that can be broken into a set of smaller tasks, however, it may be possible to match the performance requirements of a task with the performance characteristics of (a subset of) the cloud nodes.  For grids and supercomputers, this {\em many-task computing\/} approach \cite{raicu:many} has proven very effective.  E.g., Raj\-bhandari et al.~\cite{Sriram_SC14b} structured the computation of a quantum chemistry tensor contraction equation as a task graph with dependencies and were able to scale the computation to over 250,000 cores.  They dynamically schedule tasks on groups of processors and
+use work-stealing for load balancing.
 
-Although the importance of adapting requirement specification information into testing phase is well understood by the requirements engineering community \cite{bach:risk}, few studies have addressed the use of requirements during software regression testing \cite{junaid:clustering}, \cite{ozturk:quality}, \cite{saleh:goaldriven}, \cite{Kavitha:requirement}, \cite{krish:varying}, \cite{mahfuzul:multiobjective}, \cite{marchetto:multi}. The results of using requirement information within scheduling the order of execution test cases clearly denotes that utilizing this information increases the overall ability of fault detection in test case prioritization. One related study is the research report provided by Srikanth et al. \cite{srikanth:system} indicating that, with utilizing fault proneness of requirements during test case prioritization, severe faults could be detected with more ease. 
+One solution to run such many-task applications in the cloud environment is to identify and keep the updated record of the performance characteristics of the nodes and network condition between the nodes, centrally. However, maintaining this information for a large number of machines is prohibitively expensive. IBM's Air Terrific Controller (ATC) algorithm~\cite{barsness:2014:Distributed} attempts to solve this problem through having a group of controller nodes that maintain the performance information of a group of the available worker nodes, The controller nodes also compete over the available tasks in the central task-queue with other controller nodes, to fetch the one which is the best fit to the computing power of the subgroup of worker nodes. While this approach distributes the load of maintaining performance information and also makes the sub-optimal task assignment to the cloud nodes, the central job queue is still a potential source of bottleneck. In addition, the central controller nodes may not have enough information about the computational requirements and communication patterns of the individual tasks.
 
-In one state-of-the-art study introduce by Ozturk et al. \cite{ozturk:quality}, the authors have investigated test case prioritization using software quality metrics. It makes possible to determine test case priority values ahead of test event. Indeed, the strategy is a type of static code analysis that can be done without having to run the code \cite{ozturk:quality}. Nevertheless, they disregarded program structure type (PST) and deemed every quality metric criteria are uniformly effective in prioritizing test cases. However, as to researchers and practitioners not all metrics are actually useful or appropriate for different code structure types \cite{suresh:metrics}. So, the idea of this approach is that for each program under test we first need to specify the specific type of program structure. Subsequently, have higher priority for those software quality metrics as criteria to prioritize test cases that deem more effective for that specific structure type. Thereupon, the test case sets focus to test each of those reordered set of software quality metrics receive the execution priority values accordingly. Our motivation to implement this approach, the way it defined above, is that although meeting different software quality metrics as desired user requirements are of great importance; yet, test case prioritization as a technique to regression testing poses a substantial amount of computations. Due to different types of program structures, it seems necessary to reorder and prioritize between the software quality metrics. Note that, the process of deciding about appropriate software quality metric order to apply in our technique is just one-time computation and once we have it, we can use this information for the other program structure types of the same type as well. As soon as we have this ordering for software quality metrics, we can actually nullify the effect of those of them from the computations for test case execution priority values that have been assigned with the lower priority values in the ordered set. This, as a result, achieves a decrease in the cost and resource consumption for regression testing.
+In this research, we aim at using a fully-decentralized approach in which, the applications decide on which nodes to run. This approach relies on the nodes advertising the performance information periodically. This information is available either through the hypervisor node or operating system. Otherwise, the nodes measure it in certain time frequencies and distribute them to neighboring nodes. The computational tasks can be added to the cloud system at anytime resembling actual many-task application systems. When making a decision about whether perform a job locally, or move it through the overlay network, the application needs to query the required resources' availability in the overlay network, and equilibrate this information with those of job movement burden, to find the best spot to complete the job. This is a privilege of this approach for applications, which might not be available if the decision is made by leader nodes. 
 
-Another aspect about the regression testing that inspired us to perform this experiment was the large data collected from frequent execution of test cases. Although the majority of existing prioritization techniques disregard this data, the regression testing in nature is a memory-full test and the data gathered in the memory about the previous behavior of test cases in detecting faults could help as a source to learn from. The inputs of our prioritization technique are the ordered set of relevant software quality metric to the program under test structure type and the coverage information of test cases for code components in a desirable granularity level. This idea could best be implemented using the machine learning algorithms as the many employed techniques in this area to create algorithms to learn and make predictions from data sets. As the machine learning techniques seek to get computers to perform tasks without being explicitly programmed. Given the large body of computations need to be perform to prioritize test cases in each regression test session, application of a technique to gradually reduce the degree to which the prioritization technique needs to do computations for priority values to carry out the given task, seems necessary. Motivated from this idea, we first partitioned the data collected from multiple executions of our prioritization technique into two parts and used the first 67\% of data as the training set. We chose XYZ algorithm to learn the relationship between the order of prioritized set of software quality metrics used as prioritization criteria and the effectiveness of final ordered test cases on this basis. The Machine learning algorithm work by building a model from a training set. A training set is a data set that is input into an algorithm where the correct outputs are already known. The ML algorithm built the model as it red the training set. Subsequently, we checked the predictions for the remaining part of the data set. We provided two different implementations of our prioritization technique, one with the presence of the machine learning algorithm to predict future effective ordering for software quality metric set and lack thereof. The results substantiate that application of machine learning could help faster detection of fault by reducing the time required for prioritization computations and also provide more efficient prioritization test case ordering accordant to the program structure type. The learned lessons from our experiment could be employed in software development environments attempt to prioritize test cases for withe box software testing with available information about program structure type.  
+In order to decide about the direction of task movement in the cloud network, we plan to use a vector-based model. In this approach, the performance characteristics of each node is described as a vector of numerical coefficients. Plotting the nodes on an N-dimensional space, the coefficient vector and the dot-product of this vector to those available from other nodes, it is possible to find a node with highest similarity to the performance characteristics to the initiator node's vector. Therefore, it is possible to think about the vector as the direction to which the work should move. To make the vector-based decision about work migration, the main criteria is to move the jobs from longer job queues to the (nodes' with) shorter queues. However, the demonstrated computation performance of the nodes is a decidedly important factor to this. So, one important step in this research is to find the optimized vector to minimize the computation time for jobs distributing through the cloud of nodes.
 
-%need to complete brief description of your designed methodology
-The context for conducted experiments in this paper is the controlled environment performed in a research lab in the Louisiana State University. Therefore, it is considered as an off-line experiment. The subjects are the six programs in C we chose based on the prevalence in the similar studies in the literature to make the experimental results more comparable. The detailed description of aforesaid programs has been provided in the section 4.1.
+The main research questions we aim to answer in this research are as follows: 
+1 - ....
 
-Our main contributions in this paper are threefold. First, we propose a requirement based test case prioritization technique that reorders and schedules the executions of test case sets based on their relevance to the prioritized software quality metrics to meet. The criteria to prioritize software quality metric in turn is based on the expedience of metrics to the structure type of the program under test. Secondly, we introduce a heuristic to apply machine learning algorithm to the data set of software behavior including the information of test case orders and fault manifestation from the past sessions of regression test executions. The aim is to mitigate the problem of immense computations during test case prioritization and achieve shorter computation time for test cases' scheduling after a while using history data of regression test. Thirdly, we extensively test our approach against the implementation of the state-of-the-art approach suggested by Ozturk \cite{ozturk:quality} on six C programs. We also investigated the effect of machine learning on the performance of the proposed approach by testing two different implementations: the initial version and the one with machine learning algorithm applied to. Experimental results show that our new approach, improves the rate of fault detection. In addition, though the application of machine learning to reduce the time and cost of regression testing is promising, further study needs to support the findings. 
+The rest of this report has organized as follows: Section 2 summarizes the related work and introduces our motivations for the research. Section 3 explains the design of vector-based job scheduling framework and how we fit that for objectives of the research. Section 4 describes the speculated plans to improve the scheduling of the tasks to obtain better overall performance results in mass-computation compared to the previous work~\cite{peterson:decentralized} in this area. Section 5 briefly describes tensor contraction computation, as a potential application to apply our decentralized scheduling approach in. Section 6 concludes the report.
 
-The rest of the paper is organized as follows: Section II describes the three research questions addressed in this paper. Section III provides knowledge about background and relevant research to our prioritization technique. Sections IV presents the detailed description of the experimental deign of this study. We have analyzed the findings of our experiments and their implications in section V. Section VI discusses the main threats to the validity of this controlled experiment study and some of measures we took to mitigate. Finally, Section VII and VIII presents conclusions and discusses future work.
+\section{Problem Statement and Motivation}
+\subsection{Problem of Current Scheduling Algorithms}
+Prior work has demonstrated the possibility of combining the two centralized and decentralized strategies for work scheduling. The biologically inspired, Organic Grid~\cite{chakravarti:organic} approach attempts to maximize the resource utilization through fully-decentralized task-scheduling. Since this approach has developed to address the current limitations of cloud applications to utilize the planetary scale computation power of desktop grids and networks cannot be assumed to be reliable, the Organic Grid scheduling approach is able to adapt to the cloud systems with unreliable network quality. One heuristic method that used in this approach is to hierarchically move high performing nodes closer to the source of work. However, it assumes only one single source of work and builds the overlay network centered around it, while in large-scale cloud systems is not necessarily hold. An even more serious challenge with this approach is its high overhead mostly related to destruction and recreation of the overlay network around the point to which a new work added. Moreover, the agents, which encapsulate the behavior and computation, are responsible to organize the overlay network in the Organic Grid. However, since the agents are associated with individual jobs, destruction of the network and agents, as a result, leads to missing the available knowledge in the previous session is not available for the next session. One can see that, although Organic Grid had notable achievements scheduling large amounts of tasks from a consistent insertion point, yet, there is a room for improvement.
 
-\section{research questions}
-the fundamental research questions this paper tries to address can be states as follows.
-\begin{itemize}
-\item RQ1: How effectively can test case prioritization perform in faster detecting faults considering software quality metrics aware of program structure type?
+The ATC algorithm, on the other hand, attempts to perform a mid-level centralization, such that, applications make the decision to perform the jobs on the nodes based on the information they obtain about the availability of required resources' for the job for underlying nodes. Although this level of centralization and workers competing over tasks to get the best fitting job based on the controller's knowledge about the available group of workers has experimentally proven to improve the performance, the communication burden of controller nodes in this approach is a non-negligible surplus. Moreover, as mentioned before, the centralized job queue is a potential point of failure in this approach as there is a possibility of bottleneck formation as a result of controller nodes' unsystematic accessing it. Also, the air traffic controllers may not have enough information about the computational requirements and communication pattern of individual tasks.
 
-In other words, whether identification of more relevant and pressing software quality metrics, e.g. depth-of-inheritance, coupling, cyclomatic complexity, etc, with respect to different program structures, e.g. structural, modular, object-oriented, etc., is important while doing requirement based test case prioritization? Is it beneficial  to assign different priority values to the test cases correlated with each software quality metric based on the priority of requirements? 
-\item RQ2: What is the most effective category of software quality metrics need to be considered for each type of program structure?
+In prior work\cite{peterson:decentralized}, the proposed approach is fully decentralized, and the applications decide on which nodes to run, which can improve the performance of some applications in the cloud. The approach relies on the nodes to advertise their performance characteristics. This information will be available to use from hypervisor or operating system; otherwise, the nodes need to periodically measure their own performance related metrics. Then, they distribute this information into the adjacent neighboring nodes. Similar to realistic applications in cloud environments, computational tasks can add up at any point. The applications check the availability of the resources through queries in an API, in order to move the tasks to the node with appropriate availability of required resources. With applications being able to decide about the node to run the work on, they can best distribute the tasks having the information about the communication and computation characteristics of the application that would not be available if the decision is made by leader nodes.
 
-Obviously, not all defined software quality metrics are relevant to every program structure type. It seems necessary to differentiate between different software quality metrics and provide a category of more relevant ones and order them (prioritize software quality metrics) as more appropriate, desirable and critical ones for each program structure type we face.
-\item RQ3: How effectively machine learning approaches can help automatically decide about appropriate software quality metrics to apply in test case prioritization having the information of program structure type?
+In prior work~\cite{peterson:decentralized}, the authors measure the performance of the nodes as one important criteria to make the decision about job movement on its basis. However, the problem is that the nodes are prioritized based on their history of faster executing identical jobs. In the practical cloud environments however, there is every possibility that computation tasks with different sizes are added to the cloud. In this research, we are attempting to address this issue through considering the scheduling of the tasks of variable sizes to the nodes. As to the prior work~\cite{peterson:decentralized} the criteria to move the task around the network is from longer queue lists to shorter ones, and also, to the high-performing nodes. To measure the performance of the nodes, one solution would be to use \textit{Performance Software Probes}~\cite{strube:probe}, that follows a standard, such as Flick\cite{salah:performance}, to periodically run on each node. During node's advertising its performance relevant characteristics, the measurements done by the probe software is also included as an index to the node's performance in completing jobs. These standard probes help to measure the performance of the executing nodes more precisely. In the meantime, the probe software also use CPU clocks, and we need to find a way such that this time burden does not overshadow the benefits of using probes.
 
-The fact that the regression testing in nature is a memory-full test type makes it possible to use this data for more effective reordering of test cases in future runs. The availability of the data from previous executions of regression testing have been regarded from different respects to do history-based test case prioritization \cite{kim:history}, \cite{khalilian:historical}, \cite{lin:history}. Nonetheless, it is possible to apply machine-learning algorithms to learn from the behavior of software under test. Given the information of program types, the impact of application of different software quality metrics as criteria to schedule correlated test cases needs to be investigated. The empirical findings could help as a data source understand whether learning from previous executions could improve the effectiveness of applied test case prioritization technique in terms of fault detection.
-\end{itemize}
+Another problem with the prior research\cite{peterson:decentralized} is that to have nodes of different computing power and variable computation performances in the cloud, they entered some dummy computations in the code in order to artificially slow down the computation speed of the nodes. However, to make it more realistic, one possibility is to use realistic background applications that run on the same machine through a parallel VM installed on top of the hypervisor. An example for such computation-intensive applications would be search queries, such as Google searches, of different degrees of complexity.
+
+Another point of improvement is to use actual variable computing resources from a hybrid cloud environment rather than using the homogeneous cloud provided by the CloudLab during the experiments of prior work\cite{peterson:decentralized}. This helps to get more practical results than we can get with machines with relatively identical configurations and hardware facilities.
+
+One possibility in the actual cloud environments is having a sequence of tasks need to be completed in an specific order. In other words, to have valid computation results, we need to consider a task graph needs to be followed precisely. In the prior work\cite{peterson:decentralized} there is no evidence found regarding that they have considered the order of completion of the tasks in the series of conducted experiments. We are attempting to consider task dependency as one additional factor in calculations to distribute the tasks to the network of nodes in the cloud.
+
+The other respect could be improved with the prior work\cite{peterson:decentralized} would be repeating the experiments having tasks that need greater computation power than what is obtainable from the node on which the task is running. Considering this, we need to address three relevant issues arising from this: First, considering the required communication and collaboration between the nodes on which the task is running, we need to find a way for applications to query the candidate sub-group of nodes for running the task to find the group with the most efficient inter-communication possibility. The second thing to consider for the application to make a maximally optimized decision and determine the direction of moving the work in the overlay network is to find a sub-group with the best combined performance characteristics to the requirements of the task. Last but not least, there need to be a possibility to prevent the applications from assigning the tasks to the first best fitting candidate sub-group of nodes regardless of the future computation tasks entering the system. In other words, the current decision to assign the task to the sub-groups of nodes must be made also aware of resource utilization optimizations, which is an NP-complete problem and requires different heuristic approaches to be examined\cite{sujan:efficient,mahendra:task-scheduling}.   
+
+
+
+\subsection{Motivation for Vector-Based Scheduling}
+In decentralized task scheduling, every decision must be dine based on the limited amount of knowledge at a certain point in the network. As to the prior work~\cite{peterson:decentralized}, our overlay network is also composed of groups of worker nodes that organize and assigned with tasks through the controller nodes. However, the worker nodes have this option to decide whether to complete the job locally or move it to an adjacent node.
+
+\subsection{Testing Benchmark}
+The experimental measurements in the previous work\cite{peterson:decentralized} demonstrated that a meaningful correlation between the measured performance metrics of the nodes and their history of speed-to-complete-the-job does not necessarily hold. In order to achieve a dependable level in the accuracy of the results, their reproducibility and comparability with those of the previous works in this area~\cite{peterson:decentralized, Evangelinos08cloudcomputing} we use a subset of the NAS Benchmark set, which is a commonly used benchmark to test cloud computing platforms. The NAS Parallel Benchmarks (NPB) are a small set of programs designed to help evaluate the performance of parallel supercomputers~\cite{nasbenchmark:2016}.
+
+\subsection{An Application for Proposed Approach}
+
+In spite of striking advancements in the area of electronics, computational engines and communication algorithms, the development of high-performance parallel programs in many scientific areas still remains as a complicated challenge~\cite{baumgartner:compiler}. The complexity of such problems is due to the many factors that their effects needs to be considered. The choice of the algorithms to access the memory, costs, and communication overheads are only a few examples of these factors.
+Moreover, with the common resource and time limitations while developing software projects,  the high-performance optimization, efficient parallelism capabilities for computational models, and in general, the quality of the final products are inevitably compromised. Therefore, the approaches that automatically produce the high-performance parallel programs in scientific applications are highly demanding.
+One of such applications is to automatically develop program synthesis tools to facilitate the development of high-performance parallel programs for a class of scientific computations encountered in chemistry
+and physics. The required calculations in the area involve large collections of tensor contractions (generalized matrix multiplications). Currently, chemists spent weeks or months manipulating formulas containing dozens or hundreds of terms with Mathematica, hand-optimizing the computation, and writing low-level code by hand~\cite{tce:tensor:2015}. This computationally intensive calculations to express set of tensor contractions can typically take on the order of 1 TFLOP week or more and can require multiple TBs of storage.
+
+
+In particular, the computations comprise the bulk
+of the computation with the coupled cluster approach to the accurate description of the electronic structure of atoms and molecules~\cite{martin:encyclopedia,lee:achieving}. Computational approaches to modeling the structure and interactions of molecules, the electronic and optical properties of molecules, the heats and rates of chemical reactions, etc., are crucial to the understanding of chemical processes in real-world systems. Examples of applications include combustion and atmospheric chemistry, chemical vapor deposition, protein structure and enzymatic chemistry, and industrial chemical processing. A proper computation facility to efficiently perform the many-task application of tensor contraction computation is usually assumed to be powerful super-computers. However, Computational chemistry and materials science account for significant fractions of supercomputer usage at national centers (for example, approximately 85\% of total usage at Pacific Northwest National Laboratories, 30\% at NERSC, and about 50\% of SDSC's IBM SP/128 system). With the growing size of already gigantic computations and needs fast and efficient scalability of the underlying network of computers, and considering the many benefits that the cloud computing systems in mass-computations have, we motivated to focus on implementing this application to perform on high-performance cloud adapted for many-task applications with the decentralized scheduling of the tasks as described.
+
+
+Precise calculation of molecular electronic wavefunctions by methods such as coupled-cluster requires
+the computation of tensor contractions, the cost of which has polynomial computational scaling
+with respect to the system and basis set sizes. Each contraction may be executed via matrix multiplication
+on a properly ordered and structured tensor. However, data transpositions are often needed to
+reorder the tensors for each contraction. Writing and optimizing distributed-memory kernels for each
+transposition and contraction is tedious since the number of contractions scales combinatorially with the
+number of tensor indices.
+
+
+This paper provides an overview of a project that is developing
+a program synthesis system to facilitate the rapid
+development of high-performance parallel programs for a
+class of scientific computations encountered in chemistry
+and physics—electronic structure calculations, where many
+computationally intensive components are expressible as a
+set of tensor contractions. Currently, manual development
+of accurate quantum chemistry models in this domain is
+very tedious and takes an expert several months to years
+to develop and debug. The synthesis tool aims to reduce
+the development time to hours/days, by having the chemist
+specify the computation in a high-level form, from which an
+efficient parallel program is automatically synthesized. This
+should enable the rapid synthesis of high-performance implementations
+of sophisticated ab initio quantum chemistry
+models, including models that are too tedious for manual
+development by quantum chemists. Fig. 1 shows a tensor
+contraction expression for one of the terms in the coupled
+cluster model [43], [47] for ab initio electronic structure
+modeling. An optimized parallel Message Passing Interface
+(MPI) program to implement such an expression containing
+a large number of tensor products typically requires several
+thousands of lines of code.
+
+
+This paper provides an overview of a program synthesis system
+for a class of quantum chemistry computations. These computations
+are expressible as a set of tensor contractions and arise in electronic
+structure modeling. The input to the system is a a high-level specification
+of the computation, from which the system can synthesize
+high-performance parallel code tailored to the characteristics of the
+target architecture. Several components of the synthesis system are described, focusing on performance optimization issues that they
+address.
+
+
+
 
 %needs to be modified
 \section{Background and Related Work}
-The formal definition of the Test case prioritization problem provided by Rothermel et al. \cite{rothermel:empirical} as finding $\textnormal{T}'\in  \textnormal{PT}$ , such that $(\forall \textnormal{T}'')(\textnormal{T}'' \in \textnormal{PT} )(\textnormal{T}'' \neq \textnormal{T}')[f(\textnormal{T}') \geq f(\textnormal{T}'')]$. In this definition, $\textnormal{PT}$ denotes the set of all possible permutations of a given test suite $\textnormal{T}$ , and $f$ denotes a function from $\textnormal{PT}$ to real numbers.
-To select and prioritize test cases based on the software quality metrics as user requirements, a number of techniques have been proposed and studied empirically. At first, we narrow down our study of the related literature into the directly related studies to our prioritization technique. The first two studies presented in this section adapted software quality metrics as criteria to establish requirement based test case prioritization.  Subsequently, the more broad area of related work in the context of requirement based test case prioritization techniques is studied.
 
-In the most relevant study to us \cite{ozturk:quality}, a test case prioritization model based on several quality metrics such as size, complexity, and object orientation was offered. At the first phase, when using the measurements of over 20 code quality metrics, this model created a novel metric, called Quality Risk Ratio. This metric served as an indicator of methods and classes need to be refactored. The authors scheduled the next phase as synthesizing the QRR results with the test cases\textsc{\char39} code coverage data. Thus, the applied prioritization technique took both method-based and class-based approaches to schedule orders. The results of comparisons between the proposed model and that of the well-known, risk-based approach demonstrated that using the proposed metric-based prioritization technique gives approximate results with legacy techniques in seconds. The significance of this prioritization approach is that, it does not require any prior knowledge or expertise about domain code or requirement information. Additionally, not only it prioritizes test cases, but also reports a priority list for the problematic methods and classes that should be refactored. 
-
-Another background study is the investigated requirement based prioritization approach proposed by Arafeen and Do \cite{junaid:clustering}. The research aimed at exploring answer for the question regarding the impact of incorporating code analysis data on effective test case prioritization. An important point of difference between their research and other requirement based prioritization techniques is that, the authors explored whether clustering of test cases based on requirement similarities could improve the effectiveness of requirement based regression testing and particularly prioritization techniques. Employing a text-mining technique in their approach provided a means to cluster relevant requirements. Further, for each cluster, it incorporated code complexity for test case prioritization. Meanwhile, it created a set of reordered test cases using priority of the requirements. As the results of the experimental evaluations showed, using requirements-based clustering approaches improves the effectiveness of prioritization techniques in early fault detection.
-%needs to be modified
-
-After studying more relevant prioritization techniques to our proposed requirement based approach, we found several techniques introduced in the literature based relevant to our study as they share the criteria for prioritizing test cases to meet some requirement goals. We provide a summary of these studies in the following part of this section.
-
-Salehi et al. proposed a technique \cite{saleh:goaldriven} to address prioritizing test cases according to user requirements at the system level. The authors applied quality metrics as a foundation for the adopted goal-driven approach. To perform this, the focus of the proposed approach was on issues in industrial environments, requiring test teams to balance between quality, cost and effort in a project to meet multiple goals. Salehi et al. sole used non-code metrics presuming that the code based data is not often available. The mapping criteria for test cases and requirements was based on tractability links recovery technique, and the collected data subsequently incorporated to prioritize test cases with the aim of maximizing user satisfaction.
-
-In two similar experimental studies to us, Marchetto at al. \cite{marchetto:multi} and Mahfuzul et al. \cite{mahfuzul:multiobjective} introduced multi-objective prioritization techniques,  that scheduled the execution of test cases such a way that maximized the rate of detecting technical and business critical faults. Similar to other requirement based prioritization approaches, the authors retrieved the mapping data between requirements specification and test cases. Meanwhile, the recovered traceability links among system requirements and source code was included. This data provided applying the Latent Semantic Indexing technique. The strength of the proposed metric-based technique is to identify critical and fault-prone parts of the software artifacts automatically. So that, the related test cases with these parts receive a higher priority and therefore, run earlier during regression test sessions.
-
-In two separate studies \cite{Kavitha:requirement}, \cite{krish:varying} in the context of requirement based test case prioritization at system level, the authors proposed techniques to offer a model for system level test case prioritization. To improve user satisfaction with software quality, the proposed techniques employed different criteria according to which, the models prioritized system level test cases. A number of the applied criteria were customer priority, changes in the requirements, implementation complexity, and in one case \cite{krish:varying}, usability, application-flow and fault impact. The findings of the studies showed an increase in the rate of severe faults detection in practice. Meantime, the significance of the two studies is that not only the two proposed prioritization methods are cost effective, but they also persuasive objective results of the experimental evaluations on real-world software projects.
-
-Another study in the context of requirement based test case prioritization techniques proposed by Zhang et al. \cite{zhang:costs}. The authors adapted the impact of varying costs of execution of test cases, as an additional factor, to the calculations of determining the proper order for executing test cases. The proposed technique regards different costs associated to tests since On one side, the user requirement priorities are changing frequently during the software development, and uniformly categorized test requirements often fail to address stakeholders\textsc{\char39} expectations. On the other side, test cases need different execution time and resources. Given this fact, the authors also incorporated a corresponding metric into the prioritization strategy. Therefore, the proposed technique should be attributed as a bi-criteria test case prioritization. 
-
-In a similar study to above, Ma and Zhao \cite{ma:structure} introduce a requirement based test case prioritization technique which also takes the different severity of the faults into consideration. The technique attempted to improve the rate of severe faults\textsc{\char39} detection for both regression and non-regression testing. To achieve this, the proposed prioritization technique analyzed program structure and evaluated testing-importance for each module covered by test cases. The authors introduce a tool build upon the proposed prioritization technique called Aropas. The significance of the technique is that it is either applicable to non-regression testing scenarios. The reason is that the strategy is not only based on difference between the software versions or the data collected during previous test sessions, but also a new prioritization index called testing-importance of module (TIM). This index combined the two prioritization factors: fault proneness and importance of module. Therefore, the authors suggested a bi-criteria metric based prioritization strategy. Assigning higher priority values to those test cases covering important parts of the system cause early revelation of severe faults.  
 
 
 \begin{comment}
@@ -227,6 +270,7 @@ $\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
 \end{table}
 \end{comment}
 
+\begin{comment}
 \begin{table*}
 \centering
 \caption{Experiment Overview.}
@@ -273,7 +317,7 @@ variables}& Effectiveness in terms of fast detection of faults.\\ \hline
 %\end{adjustbox}
 }
 \end{table*}
-
+\end{comment}
 
 % end the environment with {table*}, NOTE not {table}!
 \begin{comment}
@@ -284,7 +328,7 @@ variables}& Effectiveness in terms of fast detection of faults.\\ \hline
 \epsfig{file=fly.eps}
 \caption{A sample black and white graphic (.eps format).}
 \end{figure}
-\end{comment}
+
 \begin{figure}
 \centering
 \epsfig{file=Understand.eps, width=3.3in}
@@ -299,32 +343,14 @@ variables}& Effectiveness in terms of fast detection of faults.\\ \hline
 \caption{APFD values for the state-of-the-art (SA) versus proposed approach (PR) on V1 to V5.}
 
 \end{figure*}
-
-
-\section{Experimental Design}
-This section presents details on the preparations for our experiment. The overall design, hypotheses, subject systems used, subjects, data collection and the
-general details of running the experiment is presented.
-
-\subsection{Study Subjects}
-The five open-source programs \cite{henard:comparing} written in C are available to download from the GNU FTP server at this address: http://ftp.gnu.org/. Test suites for the five programs are available from the Software Infrastructure Repository (SIR) \cite{do:supporting}. Grep and Sed are popular command-line tools for searching and processing text matching regular expressions. Flex is a lexical analysis generator, while Make controls the compile and build process and GzIP is a widely-used compression utility. This set of programs has been widely used to evaluate test techniques used by researchers in several studies \cite{henard:comparing}. The short description of programs used in our experiment provided in the table 1. For each of them, the number of tests cases, the six considered versions together with their size in lines of code and number of embedded faults are presented. The ability to generalize from the findings of this paper is further elaborated when discussing the threats to the validity in the experiment.
+\end{comment}
 
 
 %Our conducted experiment addresses a real problem, i.e. the differences in individual performance and the understanding of the differences.
 
 
 \subsection{Experimental Goal and Hypotheses}
-In order to determine if one or several independent variables have significant effect on one or several dependent variables researchers need to conduct hypothesis testing \cite{wohlin:experimentation}. Before the statement and formally formulating hypothesis in this paper, we need to specify dependent vs. independent variables, factors and treatments applied. The overview of the experiment is shown in Table 2.
-The main factor being analyzed is the scheduling of test case executions. This scheduling needs to consider the accordance of priority values assigned to test cases with software quality metrics aimed to be achieved. We conducted two sets of studies which share the same factor. Also, we used two different treatments in each. In the former study, we implemented and the technique suggested by Ozturk et al. \cite{ozturk:quality} and a sample implementation of our proposed technique with the prioritized list of software quality metrics accordant to structure type of each program under test as the test case prioritization criteria. In the second study on the other hand, we applied two different implementations of our approach, one initial version used in the first study, and the other one based on machine learning algorithm as to the treatments employed.
 
-The detailed null hypotheses are
-given below. The alternative hypotheses are l-tailed
-predicting the program structure aware technique in the first study and machine learning based version in the second study perform better.
-
-$\textnormal{H0} _{\textnormal{PST}}$: There is no significant difference in fault detection effectiveness between the state-of-the-art approach provided by Ozturk et al. $(\textnormal{TCP} _{\textnormal{SQM}})$ and
-our proposed test case prioritization technique $(\textnormal{TCP} _{\textnormal{SQM,PST}})$ for the six studied programs. In other words: $\textnormal{APFD}(\textnormal{TCP} _{\textnormal{SQM}}) = \textnormal{APFD}($-$\textnormal{TCP} _{\textnormal{SQM,PST}})$.
-
-$\textnormal{H1} _{\textnormal{PST}}$: The alternative hypothesis to $\textnormal{H0} _{\textnormal{PST}}$ is that our proposed test case prioritization technique performs better (has a higher rate of fault detection)
-than the state-of-the-art approach, which means: $\textnormal{APFD}(\textnormal{TCP} _{\textnormal{SQM}}) \neq \textnormal{APFD}($-$\textnormal{TCP} _{\textnormal{SQM,PST}})$. 
 \begin{comment}
 We can reject the null
 hypothesis $H0 _{PST}$ considering all tasks in both Groups A
@@ -333,52 +359,16 @@ The effect size is medium (0.51 and 0.55) for both
 groups.
 \end{comment}
 
-$\textnormal{H0} _{\textnormal{ML}}$: There is no significant difference between fault detection effectiveness of the initial version of proposed approach $(\textnormal{TCP} _{\textnormal{SQM,PST}})$ with that of the version with the machine learning algorithm applied to $(\textnormal{TCP} _{SQM,PST,ML})$ for the six studied programs. In another way: $\textnormal{APFD}($-$\textnormal{TCP} _{SQM,PST}) = \textnormal{APFD}(\textnormal{TCP} _{\textnormal{SQM,PST,ML}})$. 
-
-$\textnormal{H1} _{\textnormal{ML}}$: The alternative hypothesis to $\textnormal{H0} _{\textnormal{ML}}$ is that our proposed test case prioritization technique supplied with machine learning algorithm performs better (has a higher rate of fault detection)
-than the initial version of that approach, which means: $\textnormal{APFD}(\textnormal{TCP} _{\textnormal{SQM,PST,ML}}) \neq \textnormal{APFD}($-$\textnormal{TCP} _{\textnormal{SQM,PST}})$.
-
-\subsection{Task Categories}
-ToDo.
-\subsection{Data Collection}
-We chose the tool name Understand\texttrademark 3.0 from SciTools which is a source code comprehension tool with an IDE and a built-in editor. We used this tool to visualize the code and perform impact analysis as well as static metrics analysis. This tool also provided us with the information of test cases' relevance to the quality metrics aimed to be tested. A sample image from the tool environment has been provided in Figure 1. 
-\subsection{Running the Experiment}
-ToDo.
-\subsection{Evaluation}
-To evaluate our test case prioritization technique, we first employed the technique to prioritize test cases executed on the first version of subject programs (V0). The output of this step is the ordered sequence of test case executions provided the information about program structure type and coverage information
-obtained from execution of the test suite on V0. Then, the resulting prioritized (ordered) test suite is evaluated for the five subsequent faulty versions (V1 to V5). The faults have been seeded using mutation testing. The proposed prioritization technique has no information about the faults seeded. To assess the prioritized test suite, we use a standard measurement, commonly used in the literature in this context. This measure is called APFD, which is representative of the Average Percentage of Faults Detected. APFD uses to assess the rate of fault revelation for prioritization techniques regardless of cost and severity of detected faults. This measure is calculated according to the following formula \cite{zhang:bridging}:\\
 
 
-$\textnormal{APFD}(\pi) = 1 - \frac{ \displaystyle \sum_{i=1}^{m}\textnormal{TF}_i }{\displaystyle nm} + \frac{\displaystyle 1}{\displaystyle 2n}$,    \\
-
-where $\pi$ is an ordering of the regression test suite \cite{henard:comparing}, $n$ and $m$
-are respectively the number of test cases and the number of faults in the different versions of programs and $TF_i$ the smallest number test cases testers have to go through in sequence until fault $i$ is exposed. 
-In order to account for the stochastic nature of the prioritization algorithms, we repeated the process of executing our proposed approach on V0, evaluating it on V1-V5 and APFD calculations on each program for 100 times. Similar to other prioritization techniques, our technique also had to face ties while ordering test cases. A tie occurs when two or more test cases in the ordering have identical values for their execution order. To break such ties, our strategy is to make a random choice. However, randomly selecting test cases with identical priority values could cause different ordering and fault detection results in practice. It also increases the randomness of prioritized order of test cases and final results of fault detection. Having this in mind, we tried to collect a set of different outcomes for the prioritization approach by repeating the experiments 100 times. This sample of all possible executions allows us to use standard inferential statistical techniques to investigate the significance and compare the performance of the two implementations of the proposed prioritization technique against each other. The observable statistical representations of our findings in box-plot diagrams has been provided in figures 2. 
-
-\section{Experimental Results and Analyses}
-This section presents the results of the two studies as observational statistics display the fault detection effectiveness of the two techniques compared in each. parts of the experiment. Descriptive statistics are provided in Table 3 along with box plots in Figure 1 for fault detection effectiveness. 
 \begin{comment}
 We report on the effect of layout on accuracy and speed in all task categories as
 well as in each of the six task categories. Effect size is
 also reported using Cohen's d for accuracy and speed to
 facilitate easy comparison to other studies. 
 \end{comment}
-Since this is a within-subjects study, we use the paired Wilcoxon nonparametric
-test to determine significance of the results.
 
-\section{Threads to Validity}
-In this section, we overview certain respects in our experimental setup or issues in the methodology design that may threaten the reliability of our findings or the validity of the study. The discussed validity concerns are categorized into four groups: internal validity, external validity, construct validity and conclusion validity. We also include the designed approaches we used to minimize the impact of these threats on our findings.
 
-\subsection{Internal Validity}
-One of the major threats to the internal validity of our study is that the process of data collection and experimental setup and analysis is mostly done with a single researcher. Although we tried to mitigate this threat by discussing any unclear issue together and reviewed the data collection methodology along with the details of experimental setup, we can not disregard the risk that a single researcher has been biased and consistently extract wrong information. In the future, we hope to have larger research groups collaborate in the methodology design and setup, operation of experiments and results reviews.
-
-One of the threats to the validity of the both studies is our choice of the code coverage granularity. This is an important threat as all the evaluations and analysis of the results within the scope of this study are based on the test cases coverage level of code. There is a possibility that changing the granularity to more fine or coarse grained would give us a course of different results. To control the effect of granularity on the results, we repeated our experiments with two different levels of code coverage: branch and method coverage which the former is among the fine grained code coverage granularities while the latter is considered as a coarse grained one. The findings of repeating by keeping all other settings unchanged shows no significant change in terms of performance of two compared approaches within the studies.
-
-Another important challenge to the internal validity in the second study is regarding the choice of machine-learning algorithm as well as the number of training instances, and the type of employed data. For this study, we used the 67\% of total 100 executions of regression testing as the training set and the remaining 33\% to compare the improved performance of our technique, if any, with the application of machine learning algorithm and lack thereof. However, we need to investigate different machine learning algorithms. Also we need to study and report the effect of using training sets of different sizes.
-
-The context and nature of programs we used in our study also could be a concern to the validity of our findings in this paper. As we mentioned, these six open-source programs are available online for the use of researchers. In addition, such as many research on software testing and test techniques that rely on experimental studies based on mutation testing, this study is also prone to a potential threat to validity, leading to possible Type I errors and incorrectly rejecting the Null Hypothesis \cite{papadakis:threats}. Therefore, as a measure to control the validity threat related to the faulty versions used, we aim at extending this study with using subject programs from industry with real faults in them.
-
-The last identified and minimized threat to the internal validity is our criteria to choose between test cases to break ties, which are empirically shown to have high likelihood to occur in prioritization heuristics \cite{eghbali:lexico}. As we mentioned in the evaluation section, with the random choice between the test cases with identical priority values, the performance of such iterative prioritization schemes degrade as the number of ties encountered in prioritization steps increases. To minimize the impact of the random selection, we repeated all experiments 100 times with different selection of test cases in the event of tie in ordered sequence of test case executions. This large sample size of execution orders while keeping all other factors unchanged allows us use standard inferential statistical techniques to compare techniques against each other with minimized impact of randomness in the implications of results.   
 %\begin{itemize}
 %\item granularity of or code coverage info.
 %\item ML algorithm
@@ -387,11 +377,6 @@ The last identified and minimized threat to the internal validity is our criteri
 %\item  random idea to break ties.
 %\end{itemize}
 
-\subsection{External Validity}
-The most important threat to the external validity of our study is our chose of subject program which was based on their common use in the studies of the same context to give the researchers an evidence to be able to compare the results with other such studies. However, the limited diversity of the programs that hinders generalizing from our findings in this study and their implications. As our future work, we aim to repeat our experiment with the use of more subject programs of different structure types and programming languages.
-
-\subsection{Construct Validity}
-There are several validity threats to the design and implementation of this study that are consider as construct validity threats. First, our implementation of the state-of-the-art software quality metric based proposed by Ozturk et al. as well as the two implementations of the proposed technique in this paper could be a potential source of construct validity threats. To minimize this threat, one researcher provided the implementation for each of the technique and the other one reviewed the code and disagreements discussed together. Another source of construct validity threat is our employed tool, Understand, to extract the information of related test cases with the software quality metrics used in this study. The tool is not open-source. Yet, it can be considered as a best match for our purpose to provide code visualization and analysis capabilities for programs written in c/C++, Java, Python and many others.
 \begin{comment}
 \begin{itemize}
 \item  implementation of other SQM based TCP technique.
@@ -411,21 +396,11 @@ did not always fit..
 
 Since we had no...
 \end{comment}
-\subsection{Conclusion Validity}
-We see few threats to the results of numerical analysis and our evaluations due to the precision of estimations resulted from the statistical tests. 
+
 
 \section{Conclusions}
-In this study we investigated requirement based test case prioritization using software quality metrics regarding the structure type of the program under test. This approach assigned higher priority values to those test cases that cover testing for quality metrics have higher priority to be met either due to the user preference or according to the structure type of software under test. Our motivation to implement this approach is at the first place to efficiently choose software quality metrics due to the actual relevance to the program code structure and at the second place, to substantially reduce the amount of computations as it seems legitimate to prioritize and choose between the software quality metrics instead of applying them blindly. We used six open-source programs in C language commonly used in similar studies in this context. The statistical evaluations of the results of empirical experiments with the large number of sample size of regression test executions show that the proposed technique outperforms the state-of-the-art software quality metric based prioritization technique with respect to faster detection of injected faults in the benchmark programs.
+In this study we ..
 
-In the second portion of this experimental study, we regarded the use of large data collected from frequent execution of test cases. We utilized the collected data about the previous behavior of test cases in detecting faults as a source to learn from and perform more efficiently in future. To implementing this idea, we applied the machine learning algorithm to learn from, extract and refine a pattern and make predictions about the best practices of ordering software quality metrics and test cases accordingly to faster detect faults. Given the large body of computations need to be perform to prioritize test cases in each regression test session, application of a technique to gradually reduce the degree to which the prioritization technique needs to do computations for priority values to carry out the given task, seemed necessary. We provided two different implementations of our prioritization technique, one with the presence of the machine learning algorithm and one lack thereof. The results demonstrate that application of machine learning could help faster detection of fault by reducing the time required for prioritization computations and provide more efficient prioritization test case ordering accordant to the program structure type.
- 
-\section{Lessons Learned and Future Research}
-As a future work we plan to repeat the performed experiment in the context of industrial software development using more open source subject programs from other online databases such as GitHub or Bitbucket. We also plan to use programs in other programming languages such as Java and Python.
-
-ToDo.
-%ACKNOWLEDGMENTS are optional
-\section{Acknowledgments}
-We are grateful to Dr Alireza Khalilian for sharing his pearls of wisdom with us during the course of this research, and also benefited us with his comments that greatly improved the manuscript.
 
 %
 % The following two commands are all you need in the
